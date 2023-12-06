@@ -1,0 +1,105 @@
+$colorWhite: #fff;
+$colorGray100: #787c7e; 
+$colorGray200: #706e6e;
+$colorGray300: #bdbdbd;
+$colorGray400: #dad5d5;
+$colorYellow: #c9b458;
+$colorGreen: #6aaa64;
+$font: 'Arial Narrow', Arial, sans-serif;
+
+.letter {
+    border: 2px solid #bdbdbd;
+    width: 50px;
+    height: 50px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;   
+    font-size: 28px;
+    font-weight:600;
+    cursor: default; 
+    font-family: $font; 
+}
+
+.squareInstructionSize {
+    width: 30px;
+    height: 30px;
+}
+
+.squareMainSize {
+    width: 50px;
+    height: 50px;
+}
+
+.letterFilled {
+    border: 2px solid $colorGray200
+}
+
+.letterGray {
+    border: 2px solid $colorGray100;
+    background-color: $colorGray100;
+    color: $colorWhite
+}
+
+.letterYellow {
+    border: 2px solid $colorYellow;
+    background-color: $colorYellow;
+    color: $colorWhite;
+}
+
+.letterGreen {
+    border: 2px solid $colorGreen;
+    background-color: $colorGreen;
+    color: $colorWhite;
+}
+
+.flipCurrentLetter {
+    animation: flipTheLetter 500ms ease-in-out
+}
+
+@keyframes flipTheLetter {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+    
+}
+
+.container {
+    position: fixed;
+    border-radius: 8px;
+    border: 1px solid $colorWhite;
+    box-shadow: 0 4px 23px 0 rgba(0,0,0,.2);
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 16px;
+    width: 500px;
+    box-sizing: border-box;   
+    background-color: $colorWhite;
+    display: block;
+}
+
+.windowHeader {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.close-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-image: url('../assets/cross.png');  
+    height: 12px; 
+    width: 12px; 
+    background-size: cover;
+}  
+
+.heavyFont {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
